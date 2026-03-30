@@ -5,12 +5,9 @@ Enabling real GPT calls (optional):
 2. Create a .env file with OPENAI_API_KEY=... .
 3. Replace call_gpt() in server.py with the real implementation shown in the comments, or keep the stub.
 '''
-
 import argparse, socket, json, time, threading, math, os, ast, operator, collections
 from typing import Any, Dict
 from google import genai
-
-
 
 
 # ---------------- LRU Cache (simple) ----------------
