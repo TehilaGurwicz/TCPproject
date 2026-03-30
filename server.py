@@ -78,7 +78,7 @@ def safe_eval_expr(expr: str) -> float:
 def call_gpt(prompt: str) -> str:
 
     #for good practice we would locate api key inside of .env file to hid it (but we trust you)
-    OPENAI_API_KEY ="AIzaSyCP-PAccJqfQYgIZdDqfA-_CKLCJy_pYmI"
+    OPENAI_API_KEY = OPENAI_API_KEY = os.environ.get("GEMINI_API_KEY")
 
     client = genai.Client(api_key=OPENAI_API_KEY)
     response = client.models.generate_content(model="gemini-2.5-flash",contents=prompt)
